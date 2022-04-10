@@ -23,7 +23,7 @@ function Home() {
       <div className="hs4">
         <p className={!darkMode && 'light'}>
           I like building things for the web. This is the only thing that keeps
-          me going. I currently work at Deloitte. as an ABAP Developer.
+          me going. I currently studying Software Engineer.
         </p>
         <a target="_blank" href="/resume.pdf" className="more mt-5">
           Resume
