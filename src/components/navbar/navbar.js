@@ -1,8 +1,11 @@
+import React from 'react';
 import { useState } from 'react';
 import { MenuItems } from './menu-items';
 import '../sass/navbar.scss';
 import Hamburger from './hamburger';
 import { Logo } from '../Logo/Logo';
+import Toggle from '../Toggle/Toggle';
+import { ThemeContext } from '../../context/ThemeContext';
 /*import Aos from 'aos';
 import 'aos/dist/aos.css';*/
 
@@ -14,6 +17,8 @@ function Navbar() {
   const closeMenu = () => {
     setOn(!on);
   };
+
+  const { darkMode } = React.useContext(ThemeContext);
 
   return (
     <nav className="NavbarItems">
@@ -27,16 +32,21 @@ function Navbar() {
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a className={item.cName} href={item.url} onClick={closeMenu}>
+                <a
+                  className={darkMode ? item.cName : 'nav-links-light'}
+                  href={item.url}
+                  onClick={closeMenu}
+                >
                   {item.title}
                 </a>
               </li>
             );
           })}
         </ol>
-        <a href="resume.pdf" className="resume-button">
+        <Toggle />
+        {/* <a href="resume.pdf" className="resume-button">
           Resume
-        </a>
+        </a> */}
       </div>
     </nav>
   );

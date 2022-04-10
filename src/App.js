@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Social from './components/social';
@@ -12,10 +13,13 @@ import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Loader from './components/loader';
 import Matrix from './components/matrix';
+import { ThemeContext } from './context/ThemeContext';
 
 function App() {
   const location = useLocation();
   const hash = location.hash.split('#')[1];
+
+  const { darkMode } = React.useContext(ThemeContext);
 
   const [scrollEffect, setScrollEffect] = useState({
     scrollPos: 0,
@@ -46,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={darkMode ? 'App' : 'App body-white'}>
       <Loader />
       <Matrix />
       <header

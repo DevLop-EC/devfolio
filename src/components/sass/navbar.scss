@@ -63,8 +63,22 @@ a.nav-links {
   padding: 10px;
 }
 a.nav-links:hover {
-  color: $red-dark !important;
+  color: $red-dark;
 }
+
+a.nav-links-light {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: $blue-light-mode;
+  position: relative;
+  padding: 10px;
+}
+
+a.nav-links-light:hover {
+  color: $dark-slate;
+}
+
 /*.nav-hr {
   margin: 0px;
   opacity: 0.8;

@@ -11,7 +11,18 @@
   align-items: center;
 
   & a {
-    color: $lightest-slate !important;
+    color: $lightest-slate ;
+    padding: 10px;
+    text-decoration: none;
+    &:hover {
+      color: $red-dark !important;
+      transform: translateY(-3px);
+      transition: all 0.2s linear;
+    }
+  }
+
+  & .light {
+    color: $blue-light-mode ;
     padding: 10px;
     text-decoration: none;
     &:hover {
@@ -38,13 +49,29 @@
     margin: 5px auto;
     text-decoration: none;
     letter-spacing: 1px;
-    color: $lightest-slate !important;
+    color: $lightest-slate;
     &:hover {
       color: $red-dark !important;
       transform: translateY(-3px);
       transition: all 0.2s linear;
     }
   }
+
+  & .light {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin: 5px auto;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: $blue-light-mode;
+    &:hover {
+      color: $red-dark !important;
+      transform: translateY(-3px);
+      transition: all 0.2s linear;
+    }
+  }
+
+  
 }
 .vl {
   width: 1px;
