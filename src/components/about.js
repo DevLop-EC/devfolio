@@ -43,7 +43,7 @@ function About() {
         </div>
         <div className="about-pic">
           <div className="wrapper">
-            <img src="mypic.jpg" width="500" height="500" alt="ugliest" />
+            <img src="mypic.webp" width="500" height="500" alt="ugliest" />
             <div className="box"></div>
           </div>
         </div>
