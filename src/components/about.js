@@ -22,14 +22,14 @@ function About() {
       </h2>
       <div className="about-inner">
         <div className="about-info">
-          <p className={!darkMode && 'light'}>
+          <p className={!darkMode ? 'light' : ''}>
             Hello! My name is Christian. I'm passionate about web design and
             development. Building things is what I love the most, I like to code
             things and enjoy bringing ideas to life in the browser.I love
             learning new and better ways to create seamless user experiences
             with clean, efficient, and scalable code.
           </p>
-          <p className={!darkMode && 'light'}>
+          <p className={!darkMode ? 'light' : ''}>
             I am looking for new opportunities as React/Laravel Developer.
             Currently i'm learning Microsoft technologies.
           </p>

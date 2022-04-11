@@ -21,7 +21,7 @@ function Home() {
         </h3>
       </div>
       <div className="hs4">
-        <p className={!darkMode && 'light'}>
+        <p className={!darkMode ? 'light' : ''}>
           I like building things for the web. This is the only thing that keeps
           me going. I currently studying Software Engineer.
         </p>

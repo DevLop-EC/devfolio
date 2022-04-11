@@ -1,5 +1,9 @@
+import React from 'react';
+
 import './sass/experience.scss';
 import './sass/about.scss';
+
+import { ThemeContext } from '../context/ThemeContext';
 
 import { useState } from 'react';
 function Experience() {
@@ -19,10 +23,13 @@ function Experience() {
     },
   ];
   const [selected, setSelected] = useState(worked[0]);
+  const { darkMode } = React.useContext(ThemeContext);
 
   return (
     <section id="experience" className="experience">
-      <h2 className="numbered-heading">Experiences</h2>
+      <h2 className={darkMode ? 'numbered-heading' : 'numbered-heading-light'}>
+        Experiences
+      </h2>
       <div className="inner">
         <div className="tabList">
           {worked.map((item, index) => (
@@ -40,7 +47,7 @@ function Experience() {
         </div>
         <div className="tabPanels">
           <div className="tabPanels-inner">
-            <h3>
+            <h3 className={!darkMode ? 'light' : ''}>
               <span>{selected.title}</span>
               <span className="company">
                 &nbsp;@&nbsp;
@@ -49,11 +56,15 @@ function Experience() {
                 </a>
               </span>
             </h3>
-            <p className="range">{selected.range}</p>
+            <p className={darkMode ? 'range' : 'range__light'}>
+              {selected.range}
+            </p>
             <div>
               <ul>
                 {selected.content.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <li className={!darkMode ? 'light__li' : ''} key={i}>
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>

@@ -10,22 +10,22 @@ function Social() {
     <>
       <div className="fbl">
         <a
-          className={!darkMode && 'light'}
+          className={!darkMode ? 'light' : ''}
           href="https://github.com/nirajsharma99"
         >
           <GitHub />
         </a>
         <a
-          className={!darkMode && 'light'}
+          className={!darkMode ? 'light' : ''}
           href="https://www.linkedin.com/in/niraj-sharma-40132b165"
         >
           <LinkedIn />
         </a>
-        <a className={!darkMode && 'light'} href="https://t.me/bazoooka99">
+        <a className={!darkMode ? 'light' : ''} href="https://t.me/bazoooka99">
           <Telegram />
         </a>
         <a
-          className={!darkMode && 'light'}
+          className={!darkMode ? 'light' : ''}
           href="https://www.instagram.com/niraj.sharma__"
         >
           <Instagram />
@@ -33,7 +33,7 @@ function Social() {
         <div className="vl"></div>
       </div>
       <div className="fbr">
-        <a className={!darkMode && 'light'} href={'mailto:' + email}>
+        <a className={!darkMode ? 'light' : ''} href={'mailto:' + email}>
           {email}
         </a>
         <div className="vl"></div>
