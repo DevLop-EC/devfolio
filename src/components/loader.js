@@ -1,21 +1,10 @@
-import { useRef } from 'react';
+import PuffLoader from 'react-spinners/PuffLoader';
 import './sass/loader.scss';
 
-const getVideoSrc = (width) => {
-  if (width >= 1080) return 'loader720p.mp4';
-  if (width >= 720) return 'loader480p.mp4';
-  return 'loader480p.mp4';
-};
-
-function Loader() {
-  const loaderRef = useRef();
-  const src = getVideoSrc(window.innerWidth);
-  const closeLoader = () => {
-    loaderRef.current.style.display = 'none';
-  };
+function Loader({ loading }) {
   return (
-    <div className="loader" ref={loaderRef}>
-      <video autoPlay playsInline muted src={src} onEnded={closeLoader} />
+    <div className="loader">
+      <PuffLoader loading={loading} color={'#801B28'} size={40} />;
     </div>
   );
 }

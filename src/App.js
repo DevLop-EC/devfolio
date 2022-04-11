@@ -18,14 +18,21 @@ import { ThemeContext } from './context/ThemeContext';
 function App() {
   const location = useLocation();
   const hash = location.hash.split('#')[1];
-
-  const { darkMode } = React.useContext(ThemeContext);
-
   const [scrollEffect, setScrollEffect] = useState({
     scrollPos: 0,
     show: true,
     className: 'App-header-1',
   });
+
+  const { darkMode } = React.useContext(ThemeContext);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
 
   useEffect(() => {
     const ele = document.getElementById('hash');
@@ -51,24 +58,30 @@ function App() {
 
   return (
     <div className={darkMode ? 'App' : 'App body-white'}>
-      <Loader />
-      <Matrix />
-      <header
-        className={
-          scrollEffect.className + (scrollEffect.show ? ' active' : ' hidden')
-        }
-      >
-        <Navbar />
-      </header>
-      <div className="content">
-        <Home />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </div>
-      <Footer />
-      <Social />
+      {loading ? (
+        <Loader loading={loading} />
+      ) : (
+        <>
+          <Matrix />
+          <header
+            className={
+              scrollEffect.className +
+              (scrollEffect.show ? ' active' : ' hidden')
+            }
+          >
+            <Navbar />
+          </header>
+          <div className="content">
+            <Home />
+            <About />
+            <Experience />
+            <Projects />
+            <Contact />
+          </div>
+          <Footer />
+          <Social />
+        </>
+      )}
     </div>
   );
 }
