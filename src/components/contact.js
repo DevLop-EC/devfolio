@@ -4,9 +4,12 @@ import ButtonForm from './ButtonForm/ButtonForm';
 import emailjs from '@emailjs/browser';
 
 import './sass/contact.scss';
+import { ThemeContext } from '../context/ThemeContext';
 function Contact() {
   const [loading, setLoading] = React.useState(false);
   const form = React.useRef();
+
+  const { darkMode } = React.useContext(ThemeContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -37,8 +40,8 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <h2 className="numbered-heading overline">What's Next?</h2>
-      <h2 className="title">Get In Touch</h2>
-      <p>
+      <h2 className={darkMode ? 'title' : 'title-light'}>Get In Touch</h2>
+      <p className={darkMode ? '' : 'light'}>
         I’m currently looking for new opportunities, my inbox is always open.
         Whether you have a question or just want to say hi, I’ll surely get back
         to you!
@@ -47,18 +50,18 @@ function Contact() {
         <input
           name="name"
           type="text"
-          className="feedback-input"
+          className={darkMode ? 'feedback-input' : 'feedback-input-light'}
           placeholder="Name"
         />
         <input
           name="email"
           type="text"
-          className="feedback-input"
+          className={darkMode ? 'feedback-input' : 'feedback-input-light'}
           placeholder="Email"
         />
         <textarea
           name="message"
-          className="feedback-input"
+          className={darkMode ? 'feedback-input' : 'feedback-input-light'}
           placeholder="Comment"
         ></textarea>
 

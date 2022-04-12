@@ -24,6 +24,13 @@
     color: $lightest-slate;
     line-height: 1.1;
   }
+  & .title-light{
+    font-size: clamp(40px, 5vw, 60px);
+    margin: 0px 0px 10px;
+    font-weight: 600;
+    color: $blue-light-mode;
+    line-height: 1.1;
+  }
   a.email-link {
     color: $red-dark;
     background-color: transparent;
@@ -72,8 +79,27 @@ form {
 .feedback-input {
 	color: white;
 	font-family: Helvetica, Arial, sans-serif;
-	font-weight: 500;
-	font-size: 12px;
+	font-weight: 600;
+	font-size: 14px;
+	border-radius: 5px;
+	line-height: 18px;
+	background-color: transparent;
+	border: 2px solid $red-dark;
+	transition: all 0.3s;
+	padding: 13px;
+	margin-bottom: 15px;
+	width: 100%;
+	box-sizing: border-box;
+	outline: 0;
+	&:focus {
+		border: 2px solid #cc4949;
+	}
+}
+.feedback-input-light {
+	color: black;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 14px;
 	border-radius: 5px;
 	line-height: 18px;
 	background-color: transparent;

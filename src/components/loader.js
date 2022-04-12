@@ -4,7 +4,7 @@ import './sass/loader.scss';
 function Loader({ loading }) {
   return (
     <div className="loader">
-      <PuffLoader loading={loading} color={'#801B28'} size={40} />;
+      <PuffLoader loading={loading} color={'#801B28'} size={40} />
     </div>
   );
 }

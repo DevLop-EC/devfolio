@@ -9,16 +9,38 @@ import { useState } from 'react';
 function Experience() {
   const worked = [
     {
-      title: 'SAP ABAP Developer',
-      company: 'Deloitte',
-      location: 'Hyderabad, India',
-      range: 'Sept 2021 - Present',
-      url: 'https://www2.deloitte.com/us/en.html',
+      title: 'Implementation Web Developer',
+      company: 'Datafast S.A',
+      location: 'Guayaquil, Ecuador',
+      range: 'April 2021 - July 2021',
+      url: 'https://www.datafast.com.ec/',
       content: [
-        ' NetWeaver-Development WebAppSer ABAP Developer.',
-        'Am a backend ABAP developer at Deloitte working on a project of USA’s one of the top telecom companies.',
-        'In the bootcamp training by Deloitte I was trained in ABAP and OO ABAP.',
-        'Had some hands-on experience in Reports, BAPIs, AIF, Interfaces and Classes.',
+        'Implementation of Datafast Payment Gateway environments',
+        'Support to developers for the respective implementation of payment buttons in languages such as PHP, C# and CMS (Wordpress, Prestashop).',
+        'Inbound and Outbound Process Management in Microsoft Dynamics CRM',
+      ],
+    },
+    {
+      title: 'System support and DB manager',
+      company: 'Drocaras Industries',
+      location: 'Guayaquil, Ecuador',
+      range: 'March 2020 - November 2020',
+      url: 'https://www.drocaras.com/',
+      content: [
+        'Ensure high availability of the database and administer the billing server deployed on Linux.',
+        'Develop database tuning tasks, both in SQL queries and server configuration.',
+        'Maintenance of source code of the business system in VisualBasic, corrected system errors and implemented improvements in reporting.',
+      ],
+    },
+    {
+      title: 'Web Developer JR',
+      company: 'Manasystems',
+      location: 'Guayaquil, Ecuador',
+      range: 'March 2020 - November 2020',
+
+      content: [
+        'Support to employees and customers of the systems developed by the company.',
+        'Development and maintenance of projects focused on clinics and hospitals with technologies such as Laravel, PHP, RestfullAPI development, JavaScript, React and frameworks such as Bootstrap and Tailwind.',
       ],
     },
   ];
@@ -50,7 +72,6 @@ function Experience() {
             <h3 className={!darkMode ? 'light' : ''}>
               <span>{selected.title}</span>
               <span className="company">
-                &nbsp;@&nbsp;
                 <a href={selected.url} className="link">
                   {selected.company}
                 </a>
