@@ -25,6 +25,7 @@ const Projects = () => {
               <a
                 href={proyect.html_url}
                 target="_blank"
+                rel="noreferrer"
                 style={{
                   margin: '5px',
                   display: 'flex',

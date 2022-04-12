@@ -3,7 +3,7 @@ export const getGithubRepository = async () => {
   const data = await response.json();
 
   const proyects = data.filter((repo) => {
-    if (repo.topics != '') {
+    if (repo.topics !== '') {
       return {
         id: repo.id,
         name: repo.name,
@@ -11,6 +11,7 @@ export const getGithubRepository = async () => {
         url: repo.html_url,
       };
     }
+    return false;
   });
 
   return proyects;

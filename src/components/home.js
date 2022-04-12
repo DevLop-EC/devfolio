@@ -25,7 +25,12 @@ function Home() {
           I like building things for the web. This is the only thing that keeps
           me going. I currently studying Software Engineer.
         </p>
-        <a target="_blank" href="/resume.pdf" className="more mt-5">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="/resume.pdf"
+          className="more mt-5"
+        >
           Resume
         </a>
       </div>
