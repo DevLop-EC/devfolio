@@ -1,5 +1,5 @@
 export const getGithubRepository = async () => {
-    const response = await fetch(`https://api.github.com/users/DevLop-EC/repos`);
+    const response = await fetch(`https://api.github.com/users/christianldev/repos`);
     const data = await response.json();
   
     const proyects = data.filter((repo: { topics: string; id: number; name: string; description: string; html_url: string; }) => {
